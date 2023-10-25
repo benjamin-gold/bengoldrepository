@@ -12,8 +12,16 @@ def encoder(num_string):
         int_string += str(new_num)
     return int_string
 
-def decoder():
-    print("hi")
+
+def decode(encoded_pass):
+    entered_str = ""
+    for num in encoded_pass:
+        decoded_num = str(int(num) - 3)
+        if int(num) < 0:
+            decoded_num = str(int(num) + 10)
+        entered_str += decoded_num
+    return entered_str
+
 
 if __name__ == '__main__':
     run = True
@@ -31,6 +39,7 @@ if __name__ == '__main__':
             encoded_pass = encoder(entered_str)
             print("Your password has been encoded and stored!")
         if user_input == "2":
+            entered_str = decode(encoded_pass)
             print(f"The encoded password is {encoded_pass}, and the original password is {entered_str}")
         if user_input == "3":
             quit()
