@@ -13,7 +13,7 @@ def encoder(num_string):
     return int_string
 
 def decoder():
-    pass
+    print("hi")
 
 if __name__ == '__main__':
     run = True
